@@ -1,12 +1,10 @@
-# depends: pshazz & git
-
-git clone https://github.com/arnos-stuff/pshazz-themes.git
+# depends: pshazz
 
 $themes = Split-Path $(pshazz which linux)
 
 echo "Installing themes to $themes"
 
-Copy-Item -Path pshazz-themes/* -Destination $themes -Recurse
+Copy-Item -Path *.json -Destination $themes -Recurse
 
 # Clean up
 
