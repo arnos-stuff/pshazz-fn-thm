@@ -1,0 +1,20 @@
+{
+    "version": "0.0.3",
+    "homepage": "https://github.com/arnos-stuff/pshazz-themes",
+    "license": "MIT",
+    "description": "Arno's functional programming themes for pshazz",
+    "url": "https://github.com/arnos-stuff/pshazz-themes/releases/tag/v0.0.3",
+    "hash":"9B63BB566F4E406EBAE979B50DE405C6D00E6781354F953A3CD7ECD990CA7AD6",
+    "depends": [
+        "pshazz",
+        "7zip"
+    ],
+    "installer": {
+        "script" : [
+            "$start_dir = pwd",
+            "7z x $fname -o $original_dir",
+            "cd $original_dir/pshazz-themes-main",
+            "& $original_dir/pshazz-themes-main/install.ps1"
+        ]
+    }
+}
