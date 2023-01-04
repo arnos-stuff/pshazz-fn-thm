@@ -8,4 +8,4 @@ mv *.json $themes
 
 # Clean up
 
-Remove-Item -Path pshazz-themes -Recurse
+Remove-Item -Recurse pshazz-themes
