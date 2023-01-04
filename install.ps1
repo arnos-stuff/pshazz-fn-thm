@@ -11,9 +11,3 @@ foreach($thm in $arr) {
 	mv $thm $themes/$thm
 	rm $thm
 }
-
-Write-Progress -Activity "Cleaning up ..."
-# Clean up
-rm -r .
-cd ..
-rm -r pshazz-themes-main
