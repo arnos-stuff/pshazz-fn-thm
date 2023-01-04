@@ -1,0 +1,54 @@
+{
+    "plugins": ["git", "z", "virtualenv", "dircolors", "hg"],
+    "dircolors": {
+        "dirs": [[".*", "darkblue", ""]],
+        "files": [
+            ["(?ix).(7z|zip|tar|gz|rar)$", "darkcyan", ""],
+            [
+                "(?ix).(exe|bat|cmd|py|pl|ps1|psm1|vbs|rb|reg|md|txt|tex)$",
+                "darkgreen",
+                ""
+            ],
+            ["(?ix).(doc|docx|ppt|pptx|xls|xlsx|mdb|mdf|ldf|lock)$", "magenta", ""],
+            ["(?ix).(txt|cfg|conf|config|yml|ini|csv|log|json)$", "darkyellow", ""],
+            ["(?ix).(sln|csproj|sqlproj|proj|targets|rc|ignore)$", "red", ""],
+            ["(?ix).env.*", "white", ""],
+            [".*", "darkgray", ""]
+        ]
+    },
+    "prompt": [
+        ["cyan", "", "{ "],
+        ["darkblue", "", "$dir"],
+        ["cyan", "", " }"],	
+        ["cyan", "", "$([system.text.encoding]::utf8.getstring((226,128,148))){ "],
+        ["white", "", "@"],
+        ["darkblue", "", "$user"],
+        ["cyan", "", " }$([system.text.encoding]::utf8.getstring((226,128,148))) "],
+        ["green", "", " $git_branch"],
+        ["", "", " $git_local_state"],
+        ["", "", " $git_remote_state"],
+        ["magenta", "", "$virtualenv"],
+        ["blue", "", " $([system.text.encoding]::utf8.getstring((206,190)))"],
+        ["blue", "", "$([system.text.encoding]::utf8.getstring(40))"],
+        ["cyan", "", "$([system.text.encoding]::utf8.getstring((226,151,143)))"],
+        ["blue", "", "$([system.text.encoding]::utf8.getstring(41))"],
+        ["cyan", "", " ==> "]
+    ],
+    "git": {
+        "prompt_unstaged": "*",
+        "prompt_staged": "+",
+        "prompt_stash": "$",
+        "prompt_untracked": "%",
+        "prompt_remote_push": ">",
+        "prompt_remote_pull": "<",
+        "prompt_remote_same": "="
+    },
+    "virtualenv": {
+        "prompt": " ::[{0}]:: ",
+        "prompt_color": "magenta"
+    },
+    "hg": {
+        "prompt": " [{0}] ",
+        "prompt_color": "darkcyan"
+    }
+}
