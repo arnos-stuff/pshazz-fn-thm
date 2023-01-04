@@ -4,7 +4,7 @@ $themes = Split-Path $(pshazz which linux)
 
 echo "Installing themes to $themes"
 
-Copy-Item -Path *.json -Destination $themes -Recurse
+mv *.json $themes
 
 # Clean up
 
