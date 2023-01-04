@@ -7,11 +7,12 @@ $arr = $(ls *.json)
 
 foreach($thm in $arr) {
 	$thm = Split-Path $thm -leaf
-	echo "Moving: $thm ==> $themes/$thm"
+	Write-Progress -Activity "Moving: $thm ==> $themes/$thm"
 	mv $thm $themes/$thm
 	rm $thm
 }
 
+Write-Progress -Activity "Cleaning up ..."
 # Clean up
 rm -r .
 cd ..
