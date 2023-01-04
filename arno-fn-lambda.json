@@ -35,13 +35,17 @@
         ["cyan", "", " ==> "]
     ],
     "git": {
-        "prompt_unstaged": "*",
+        "branch_color": "green",
+        "branch_prefix": "(",
+        "branch_suffix": ")",
+        "prompt": " ({0})",
+        "prompt_unstaged": "\u25CF",
         "prompt_staged": "+",
         "prompt_stash": "$",
         "prompt_untracked": "%",
-        "prompt_remote_push": ">",
-        "prompt_remote_pull": "<",
-        "prompt_remote_same": "="
+        "prompt_remote_push": "\u23EB",
+        "prompt_remote_pull": "\u23EC",
+        "prompt_remote_same": "\u2705"
     },
     "virtualenv": {
         "prompt": " ::[{0}]:: ",
