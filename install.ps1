@@ -7,8 +7,8 @@ echo "This will overwrite existing themes with the same name"
 $arr = $(ls *.json)
 
 foreach($thm in $arr) {
-	if (Test-Path -Path $file -PathType Leaf) {
-		rm $themes/$thm
+	if (Test-Path -Path $thm -PathType Leaf) {
+		rm $thm
 	}
 	$thm = Split-Path $thm -leaf
 	Write-Progress -Activity "Moving: $thm ==> $themes/$thm"
