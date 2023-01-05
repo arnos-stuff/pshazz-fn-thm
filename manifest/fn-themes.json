@@ -1,0 +1,15 @@
+{
+  "version": "0.0.2",
+  "homepage": "https://github.com/arnos-stuff/pshazz-fn-thm",
+  "license": "MIT",
+  "description": "Arno's functional programming themes for pshazz",
+  "url": "https://github.com/arnos-stuff/pshazz-fn-thm/archive/refs/tags/fn-v0.0.2.zip",
+  "hash": "30D0C240276C93C4FC92FA730C7E4787F3343E4203443273BB6646092779A672",
+  "depends": [
+    "pshazz"
+  ],
+  "post_install": [
+    "scripts/move-themes.ps1",
+    "pshazz use theme frost-fn-f"
+  ]
+}
