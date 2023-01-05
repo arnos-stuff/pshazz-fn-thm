@@ -1,0 +1,1 @@
+& "$PSScriptRoot\scripts\move-themes.ps1"
