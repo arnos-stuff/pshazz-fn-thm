@@ -9,7 +9,7 @@
     "pshazz"
   ],
   "post_install": [
-    "scripts/move-themes.ps1",
-    "pshazz use theme frost-fn-f"
+    "$dir/scripts/move-themes.ps1",
+    "pshazz use frost-fn-f"
   ]
 }
