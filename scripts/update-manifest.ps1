@@ -13,5 +13,6 @@ $manifest.url = getLatestReleaseZipUrl $user $repo ;
 $manifest.hash = getHashLatestReleaseZipFile $user $repo ;
 $manifest.version = getVersionFromTag  $tag;
 $manifest.homepage = $homepage ;
+$manifest.extract_dir = "pshazz-fn-thm-$tag" ;
 
 $manifest | ConvertTo-Json -Depth 10 | Out-File "$PSScriptRoot\..\manifest\fn-themes.json" -Encoding utf8 -Force ;
